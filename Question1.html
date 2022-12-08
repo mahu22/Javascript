@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        
+        <meta charset="utf-8">
+       
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script>
+            
+            function calculations()
+            {
+                var num1 = parseFloat(document.getElementById('num1').value);
+                var num2 = parseFloat(document.getElementById('num2').value);
+                
+                var operators = document.getElementById('operators').value;
+                
+                if(operators === '+')
+                {
+                    document.getElementById('result').value = num1+num2;
+                }
+                
+                if(operators === '-')
+                {
+                    document.getElementById('result').value = num1-num2;
+                }
+                
+                if(operators === '/')
+                {
+                    document.getElementById('result').value = num1/num2;
+                }
+                
+                if(operators === '*')
+                {
+                    document.getElementById('result').value = num1*num2;
+                }
+            }
+            
+        </script>
+        
+    </head>
+    <center><fieldset style="width: 500px;"><body>
+        <h2><b>CALCULATOR</b></h2>
+        <input type="text" id="num1"/><br/><br/>
+        <input type="text" id="num2"/><br/><br/>
+        
+        <select id="operators">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="/">/</option>
+            <option value="*">*</option>
+        </select>&nbsp; &nbsp;
+        
+        <button onclick="calculations()">=</button> <br><br>
+        <input type="text" id="result"/>
+        
+    </body></fieldset></center>
+</html>
